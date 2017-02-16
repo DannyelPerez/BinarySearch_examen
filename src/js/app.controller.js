@@ -61,16 +61,12 @@ angular.module('myApp', []).controller('appCtrl', function($scope) {
 	}
 
 	function changeLimitColors(start, end){
-		// if(start >= 0 && start< vm.numbers.length)
 			vm.numbers[start].color = colors.laterals
-		// if(end < vm.numbers.length && end >= 0)
 			vm.numbers[end].color = colors.laterals
 	}
 
 	function changeCenterColors(start, end){
 		for(let i = start+1; i<end;i++){
-			// if(i >= vm.numbers.length)
-				// break;
 			vm.numbers[i].color = colors.inactive;
 		}
 	}
@@ -84,9 +80,6 @@ angular.module('myApp', []).controller('appCtrl', function($scope) {
 	}
 
 	vm.search = async function(){
-		// changePrevious();
-		// changeLimitColors(vm.currentStart,vm.currentEnd);
-		// changeCenterColors(vm.currentStart,vm.currentEnd);
 		let result = numberExists(vm.numberToSearch,vm.currentStart,vm.currentEnd);
 		if(result === true){
 			previous = {};
